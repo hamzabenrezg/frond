@@ -19,6 +19,6 @@ node {
     }
     
     stage("Copy") {
-        sh "cp -a /var/lib/jenkins/workspace/angular-pipeline/dist/jenkins-test/. /var/www/jenkins_test/html/"
+        sh "cp -a /var/lib/jenkins/workspace/angular-pipeline/dist/client-1/. /var/www/jenkins_test/html/"
     }
 }
