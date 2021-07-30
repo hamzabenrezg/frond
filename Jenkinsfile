@@ -9,16 +9,15 @@ node {
     stage('Install node modules') {
         sh "npm install"
     }
-
-    stage("Test") {
-        sh "npm run test-headless"
-    }
-
+  
     stage("Build") {
         sh "npm run build --prod"
     }
-    
-    stage("Copy") {
-        sh "cp -a /var/lib/jenkins/workspace/angular-pipeline/dist/client-1/. /var/www/jenkins_test/html/"
+  
+
+    stage("Test") {
+        sh "ng test"
     }
+  
+    
 }
