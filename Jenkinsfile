@@ -1,4 +1,7 @@
-node {
+pipeline {
+    agent any
+    tools {nodejs "nodejs"}
+    
     stages{
         stage ("cloning") {
             steps{
